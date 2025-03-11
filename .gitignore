@@ -1,0 +1,7 @@
+.idea
+
+structbuilder
+
+# test files
+person.go
+person_builder.go
