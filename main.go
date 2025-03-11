@@ -71,7 +71,7 @@ func parseConfigFromArgs(args []string) *Config {
 	flagSet.Parse(args[1:])
 
 	if config.structName == "" {
-		log.Fatal("Usage: structBuilder -structName=StructName")
+		log.Fatal("Usage: structBuilder -structname=<StructName>")
 	}
 
 	if config.outputDir == "" {
