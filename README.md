@@ -1,3 +1,5 @@
+![Project Status: Alpha](https://img.shields.io/badge/status-alpha-orange)
+
 # Struct Builder
 structbuilder is a CLI tool for Go that automates the generation of "builder" structs and methods for your existing structs
 
