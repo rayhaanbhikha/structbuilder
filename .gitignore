@@ -28,6 +28,8 @@ go.work.sum
 
 structbuilder
 
+models
+
 # test files
 person.go
 person_builder.go
