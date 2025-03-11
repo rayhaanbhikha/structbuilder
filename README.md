@@ -1,19 +1,19 @@
 ![Project Status: Alpha](https://img.shields.io/badge/status-alpha-orange)
 
 # Struct Builder
-structbuilder is a CLI tool for Go that automates the generation of "builder" structs and methods for your existing structs
+Struct Builder is a CLI tool for Go that automates the generation of "builder" structs and methods for your existing structs
 
 ## Installation
-To install the structBuilder tool, you'll need to ensure that your Go environment is set up with the necessary paths. You can install the tool using the following command:
+To install the structbuilder tool, you'll need to ensure that your Go environment is set up with the necessary paths. You can install the tool using the following command:
 ```sh
-go install github.com/yourusername/structBuilder@latest
+go install github.com/yourusername/structbuilder@latest
 ```
 
 ## Usage
-structBuilder is meant to be integrated directly into your Go project's build process using the go:generate directive. This allows you to automatically generate builder structs whenever you run go generate.
+Struct Builder is meant to be integrated directly into your Go project's build process using the go:generate directive. This allows you to automatically generate builder structs whenever you run go generate.
 
 ### How to Use
-1. Annotate your structs with the go:generate directive specifying the -structname flag. This will tell structBuilder which structs need builders.
+1. Annotate your structs with the go:generate directive specifying the -structname flag. This will tell structbuilder which structs need builders.
 2. Execute go generate in your package directory to automatically generate the builder structs and methods.
 
 ### Example
@@ -22,7 +22,7 @@ Consider you have the following structs in your models package:
 ```go
 package models
 
-//go:generate structBuilder -structname=Person
+//go:generate structbuilder -structname=Person
 type Person struct {
     FirstName string
     LastName  string
@@ -31,20 +31,20 @@ type Person struct {
     Weight    float64
 }
 
-//go:generate structBuilder -structname=Animal
+//go:generate structbuilder -structname=Animal
 type Animal struct {
     Name string
     Age  int
 }
 ```
 
-The directives `//go:generate structBuilder -structname=Person` and `//go:generate structBuilder -structname=Animal` specify that you want to create builder structs for Person and Animal.
+The directives `//go:generate structbuilder -structname=Person` and `//go:generate structbuilder -structname=Animal` specify that you want to create builder structs for Person and Animal.
 
 After setting up the directives:
 1. Open a terminal and navigate to the directory containing your models package. 
 2. Run the following command: `go generate`
 
-This will execute the structBuilder tool for each of the specified structs, generating files with builder methods.
+This will execute the structbuilder tool for each of the specified structs, generating files with builder methods.
 
 ### Output
 
